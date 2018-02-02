@@ -170,7 +170,7 @@
 #   y += 1
 #   print arr2
 # end
-# 
+#
 # # Ejercicio 6: Maninuplacion de multiples array
 #
 # arr1 = [1,2,3,0,1,2,2,1,2,1,2,0,3]
@@ -191,3 +191,32 @@
 #   i += 1
 # end
 # print arr3
+#
+# # Ejercicio 7 : operaciones de conjunto con 2 arrays
+#
+# a = [1,2,3,9,12,31, "domingo"]
+# b = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+#
+# # 1 - concatenacion
+#
+# concatenation = a + b
+# print concatenation
+#
+# # 2 - union de ambos conjuntos
+# union = a|b
+# puts union
+#
+# # 3 - inteseccion
+# intersection = a & b
+# puts intersection
+
+# # Ejercicio 8
+# a = [1,2,3,4,5,6,7,8]
+# a.each_slice(2){|a| print a}
+
+# Ejercicio 9
+a = "1,2,7,1,3,5,3.4,9,1"
+b = a.split(',').map{|i| i.to_i}
+resultado = b.sum / b.size
+
+puts " los numeros suman #{b.sum} y su promedio de los numeros es #{resultado}"
