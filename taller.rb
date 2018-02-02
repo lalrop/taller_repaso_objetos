@@ -127,37 +127,67 @@
 #
 # puts cant_charact(nombre)
 #
-# Ejercicio 5 Iteracion en multiples arrays
-a = [1,2,3]
-b = [:azul, :rojo, :amarillo]
-c = ["Tacos", "Quesadillas", "Hamburguesas"]
-
-d = a + b + c
-# for i in 0..d.length
-# puts " #{d.values_at(i)} : #{i}"
+# # Ejercicio 5 Iteracion en multiples arrays
+# a = [1,2,3]
+# b = [:azul, :rojo, :amarillo]
+# c = ["Tacos", "Quesadillas", "Hamburguesas"]
+#
+# d = a + b + c
+# # Parte 1
+# x = 0
+# while x < 3
+#   arr = []
+#   arr.push(d[x],d[x+3],d[x+6])
+#   x += 1
+#   puts "#{arr[0]}   #{arr[1]}   #{arr[2]}"
 # end
-
-x = 0
-while x < 3
-  arr = []
-  arr.push(d[x],d[x+3],d[x+6])
-  x += 1
-  puts "#{arr[0]}   #{arr[1]}   #{arr[2]}"
-end
-
-puts '//////////////////////////////////////////////////////////////'
-
-i = 0
-while i < 3
-  arr1 = []
-  case i
-  when 0
-  arr1.push(d[i],d[i+5],d[i+6])
-  when 1
-  arr1.push(d[i],d[i+3],d[i+6])
-  when 2
-  arr1.push(d[i],d[i+1],d[i+6])
-  end
-  i += 1
-  puts "#{arr1[0]}   #{arr1[1]}    #{arr1[2]}"
-end
+#
+# puts '//////////////////////////////////////////////////////////////'
+#
+# #Parte 2
+# i = 0
+# while i < 3
+#   arr1 = []
+#   case i
+#   when 0
+#   arr1.push(d[i],d[i+5],d[i+6])
+#   when 1
+#   arr1.push(d[i],d[i+3],d[i+6])
+#   when 2
+#   arr1.push(d[i],d[i+1],d[i+6])
+#   end
+#   i += 1
+#   puts "#{arr1[0]}   #{arr1[1]}    #{arr1[2]}"
+# end
+#
+# puts '///////////////////////////////////////////////////////////////////'
+#
+# # Parte 3
+# y = 0
+# while y < 3
+#   arr2 = []
+#   arr2.push(d[y], d[y+3], d[y+6])
+#   y += 1
+#   print arr2
+# end
+# 
+# # Ejercicio 6: Maninuplacion de multiples array
+#
+# arr1 = [1,2,3,0,1,2,2,1,2,1,2,0,3]
+# arr2 = [:azul, :verde, :amarillo]
+#
+# arr3 = []
+# i = 0
+# while i < arr1.length
+#   if arr1[i] == 0
+#     arr3.push(:azul)
+#   elsif arr1[i] == 1
+#     arr3.push(:verde)
+#   elsif arr1[i] == 2
+#     arr3.push(:amarillo)
+#   else
+#     arr3.push(nil)
+#   end
+#   i += 1
+# end
+# print arr3
