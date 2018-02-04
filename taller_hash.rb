@@ -56,66 +56,83 @@
 #
 # puts restaurant_menu
 #
-# Ejercicio 3 : Ejercicio completo con un hash
+# # Ejercicio 3 : Ejercicio completo con un hash
+#
+# inventario = {"Notebooks": 4, "Pc escritorio": 6, "Routers": 10, "Impresoras": 6}
+#
+# puts ' Ingrese una de las siguientes opciones '
+# puts ' 1: Ingresar un nuevo item'
+# puts ' 2: Stock total en la bodega'
+# puts ' 3: Producto con mayor stock'
+# puts ' 4: Consultar existencia de un producto'
+# puts ' 5: Salir'
+#
+# option = gets.chomp.to_i
+# stocks = inventario.values
+# products = inventario.keys
+#
+# while option != 5
+#   case option
+#
+#   when 1
+#     puts ' Ingrese nombre y stock separados por una coma (,)'
+#     new = gets.chomp.capitalize.split(',')
+#     product = new[0].to_sym
+#     stock = new[1].to_i
+#     inventario[product] = stock
+#     puts "usted a ingresado el producto #{product} con un stock de #{stock}"
+#
+#   when 2
+#     total_stock = stocks.sum
+#     puts "El stock total es de #{total_stock} productos"
+#
+#   when 3
+#     stocks_ord = stocks.sort
+#     puts "#{inventario.key(stocks_ord[-1])} con un stock de #{stocks_ord[-1]} es el producto con mayor stock"
+#
+#   when 4
+#     puts '¿Qué producto busca?'
+#     product = gets.chomp.capitalize.to_sym
+#
+#     if products.include?(product) or products.include?(product.upcase) or products.include?(product.downcase)
+#       puts 'El producto existe en el inventario'
+#       puts " #{product} tiene un stock de #{inventario[product]}"
+#
+#     else
+#       puts 'El producto no esta en el inventario'
+#     end
+#
+#   end
+#   puts '   '
+#   puts ' Ingrese una de las siguientes opciones '
+#   puts ' 1: Ingresar un nuevo item'
+#   puts ' 2: Stock total en la bodega'
+#   puts ' 3: Producto con mayor stock'
+#   puts ' 4: Consultar existencia de un producto'
+#   puts ' 5: Salir'
+#
+#   option = gets.chomp.to_i
+#   stocks = inventario.values
+#   products = inventario.keys
+#
+#
+# end
+#
+# puts 'Usted a salido, ADios!'
 
-inventario = {"Notebooks": 4, "Pc escritorio": 6, "Routers": 10, "Impresoras": 6}
+# Ejercicio 4 : Arrays y Hashes
+personas = ["Carolina", "Alejandro", "Maria Jesús", "Valentín"]
+edad = [32, 28, 41, 19]
 
-puts ' Ingrese una de las siguientes opciones '
-puts ' 1: Ingresar un nuevo item'
-puts ' 2: Stock total en la bodega'
-puts ' 3: Producto con mayor stock'
-puts ' 4: Consultar existencia de un producto'
-puts ' 5: Salir'
-
-option = gets.chomp.to_i
-stocks = inventario.values
-products = inventario.keys
-
-while option != 5
-  case option
-
-  when 1
-    puts ' Ingrese nombre y stock separados por una coma (,)'
-    new = gets.chomp.capitalize.split(',')
-    product = new[0].to_sym
-    stock = new[1].to_i
-    inventario[product] = stock
-    puts "usted a ingresado el producto #{product} con un stock de #{stock}"
-
-  when 2
-    total_stock = stocks.sum
-    puts "El stock total es de #{total_stock} productos"
-
-  when 3
-    stocks_ord = stocks.sort
-    puts "#{inventario.key(stocks_ord[-1])} con un stock de #{stocks_ord[-1]} es el producto con mayor stock"
-
-  when 4
-    puts '¿Qué producto busca?'
-    product = gets.chomp.capitalize.to_sym
-
-    if products.include?(product) or products.include?(product.upcase) or products.include?(product.downcase)
-      puts 'El producto existe en el inventario'
-      puts " #{product} tiene un stock de #{inventario[product]}"
-
-    else
-      puts 'El producto no esta en el inventario'
-    end
-
-  end
-  puts '   '
-  puts ' Ingrese una de las siguientes opciones '
-  puts ' 1: Ingresar un nuevo item'
-  puts ' 2: Stock total en la bodega'
-  puts ' 3: Producto con mayor stock'
-  puts ' 4: Consultar existencia de un producto'
-  puts ' 5: Salir'
-
-  option = gets.chomp.to_i
-  stocks = inventario.values
-  products = inventario.keys
-
-
+personas_hash = {}
+i = 0
+while i != personas.size
+  personas_hash[personas[i]] = edad[i]
+  i += 1
 end
 
-puts 'Usted a salido, ADios!'
+def edades(hash)
+  puts hash.values
+end
+
+edades(personas_hash)
