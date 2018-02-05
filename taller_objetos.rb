@@ -60,5 +60,4 @@ end
 20.times do
   b = []
   b = Q.new
-  Q
 end
