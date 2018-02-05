@@ -119,20 +119,45 @@
 # end
 #
 # puts 'Usted a salido, ADios!'
+#
+# # Ejercicio 4 : Arrays y Hashes
+# personas = ["Carolina", "Alejandro", "Maria Jesús", "Valentín"]
+# edad = [32, 28, 41, 19]
+#
+# personas_hash = {}
+# i = 0
+# while i != personas.size
+#   personas_hash[personas[i]] = edad[i]
+#   i += 1
+# end
+#
+# def edades(hash)
+#   puts hash.values
+# end
+#
+# edades(personas_hash)
 
-# Ejercicio 4 : Arrays y Hashes
-personas = ["Carolina", "Alejandro", "Maria Jesús", "Valentín"]
-edad = [32, 28, 41, 19]
+# 5
+nombres = %w(Ana Euslaquia Florinda Arlmando Godofredo Ramon Benito Bartolomeo)
+pais = %w(Chile Argentina EEUU Canada España Portugal Honduras Inglaterra)
+continente = %w(America America America America Europa Europa Europa Europa)
+genero = %w(Femenino Femenino Femenino Masculino Masculino Masculino Masculino Masculino )
+
+# 1 - array de hashes
 
 personas_hash = {}
 i = 0
-while i != personas.size
-  personas_hash[personas[i]] = edad[i]
+while i < nombres.size
+  personas_hash[nombres[i]] = [pais[i]] + [continente[i]] + [genero[i]]
   i += 1
 end
+array_personas = []
+print array_personas.push(personas_hash)
 
-def edades(hash)
-  puts hash.values
-end
+puts '//////////////////////////////////////////////////////////////////'
 
-edades(personas_hash)
+# 2 -cantidad de personas
+cantidad_personas = personas_hash.keys.count
+puts "Tenemos en total, #{cantidad_personas} personas"
+
+# 3 - TERMINAR EJERCICIO 5
