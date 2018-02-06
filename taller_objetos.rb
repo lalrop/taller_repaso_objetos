@@ -37,27 +37,40 @@
 # x = Q.new
 
 # Ejercicio 3
+#
 class Car
   @@t_instances = 0
   @@q_instances = 0
+  def self.mostrar_contador
+    puts "He contado #{@@t_instances} de T"
+    puts "He contado #{@@q_instances} de Q"
 
+  end
 end
 
 class T < Car
   def initialize
     @@t_instances += 1
   end
-  puts "He contado #{@@t_instances} instancias de T"
 end
 
-class Q < T
-  def initialize1
+class Q < Car
+  @@q_instances
+  def initialize
     @@q_instances += 1
   end
-  puts "He contado #{@@q_instances} instancias de Q"
 end
 
+t = []
+q = []
+
 20.times do
-  b = []
-  b = Q.new
+  t.push(T.new)
 end
+
+
+25.times do
+  q.push(Q.new)
+end
+
+Car.mostrar_contador
