@@ -1,43 +1,43 @@
-# # Ejercicio 1
-# class T
-#   def method1()
-#     puts 'soy un metodo de instancia y estoy funcionando'
-#   end
-# end
-#
-# T.new.method1
-#
-# # Ejercicio 2
-#
-# class T
-#   def self.method1()
-#     puts 'soy un metodo de clase y estoy funcionando'
-#   end
-# end
-#
-# T.method1
-#
-# # Ejercicio 2
-#
-# class T
-#   def method1
-#     @numeros = *(1..100)
-#     @numero_random  = @numeros.sample
-#     puts "tu numero es #{@numero_random}"
-#   end
-# end
-#
-# class Q < T
-#   attr_accessor :a
-#   def initialize
-#     @a = method1
-#   end
-# end
-#
-# x = Q.new
+# Ejercicio 1
+class T
+  def method1()
+    puts 'soy un metodo de instancia y estoy funcionando'
+  end
+end
 
-# Ejercicio 3
-#
+T.new.method1
+
+# Ejercicio 2
+
+class T
+  def self.method1()
+    puts 'soy un metodo de clase y estoy funcionando'
+  end
+end
+
+T.method1
+
+# Ejercicio 2
+
+class T
+  def method1
+    @numeros = *(1..100)
+    @numero_random  = @numeros.sample
+    puts "tu numero es #{@numero_random}"
+  end
+end
+
+class Q < T
+  attr_accessor :a
+  def initialize
+    @a = method1
+  end
+end
+
+x = Q.new
+
+Ejercicio 3
+
 class Car
   @@t_instances = 0
   @@q_instances = 0
